@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{ site.lang | default: "en-US" }}">
+<html lang="{{ site.lang | default: "en-US" }}" class="bg-slate-200">
   <head>
     <!-- google analytics -->
   {% if site.google-analytics %}
@@ -28,8 +28,8 @@
   <script>hljs.highlightAll();</script>
     
   </head>
-  <body class="font-sans">
-    <section class="grid h-full w-full auto-cols-fr gap-0 bg-slate-200 md:grid-cols-2 md:grid-rows-2">
+  <body class="container mx-auto max-w-4xl font-sans">
+    <section class="grid h-full w-full auto-cols-fr gap-2.5 md:grid-cols-2 md:grid-rows-2">
       <header>
         <h1><a href="{{ "/" | absolute_url }}">{{ site.title | default: site.github.repository_name }}</a></h1>
 
@@ -56,12 +56,12 @@
         {% endif %}
       </header>
       <main class="md:row-span-2">
-
-      {{ content }}
-
+        {{ content }}
       </main>
       <footer>
-        <p>© 2024</p>
+        <div class="grid content-end">
+          <p>© 2024</p>
+        </div>
       </footer>
     </section>
     <script src="{{ "/assets/js/scale.fix.js" | relative_url }}"></script>
