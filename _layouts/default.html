@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{ site.lang | default: "en-US" }}">
+<html lang="{{ site.lang | default: "en-US" }}" class="h-screen w-screen bg-gray-900">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,54 +7,37 @@
 
     {% seo %}
 
-    <script src="https://cdn.tailwindcss.com"></script>
-    <!--link rel="stylesheet" href="{{ "/assets/css/style.css?v=" | append: site.github.build_revision | relative_url }}"-->
+    <!-- Tailwind CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@^2.0/dist/tailwind.min.css" rel="stylesheet">
+
+    <!-- Your custom styles -->
+    <link href="/assets/css/style.css" rel="stylesheet">
+
     <!--[if lt IE 9]>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
     <![endif]-->
 </head>
-<body class="bg-white flex">
+<body class="bg-white font-sans antialiased">
+<div class="min-h-screen flex flex-col">
+    <header class="bg-gray-800 text-white py-4">
+        <div class="container mx-auto px-4">
+            <h1 class="text-3xl font-bold">
+                <a href="{{ "/" | absolute_url }}">{{ site.title | default: site.github.repository_name }}</a>
+            </h1>
+            <p class="text-sm">{{ site.description | default: site.github.project_tagline }}</p>
+        </div>
+    </header>
 
-<header class="bg-gray-800 text-white py-4 w-64">
-    <h1 class="text-3xl font-bold">
-        <a href="{{ "/" | absolute_url }}">{{ site.title | default: site.github.repository_name }}</a>
-    </h1>
-    <p class="text-sm">{{ site.description | default: site.github.project_tagline }}</p>
-</header>
+    <main class="flex-1 container mx-auto px-4 py-8">
+        {{ content }}
+    </main>
 
-<section class="flex-1 overflow-y-auto p-8">
-    {{ content }}
-</section>
-
-<footer class="bg-gray-800 text-white py-4 w-64">
-    <div class="navbox">
-        <h2 class="text-lg font-semibold">Recent Posts:</h2>
-        {% for post in site.posts limit:5 %}
-            <p>
-                <b>{{ post.date | date_to_string: "ordinal", "DE" }}:</b><br />
-                <a href="{{ post.url | prepend: site.baseurl }}" class="text-blue-500">{{ post.title }}</a>
-            </p>
-        {% endfor %}
-    </div>
-
-    <div class="navbox">
-        <h2 class="text-lg font-semibold">Categories:</h2>
-        {% for category in site.categories %}
-            <b><a href="{{site.baseurl}}/category/{{ category | first }}" class="text-blue-500">{{ category | first }}</a></b><br />
-        {% endfor %}
-    </div>
-
-    {% if site.github.is_user_page %}
-        <br />
-        <p class="view"><a href="{{ site.github.owner_url }}" class="text-blue-500">View My GitHub Profile</a></p>
-    {% endif %}
-
-    {% if site.github.is_project_page %}
-        <p>This project is maintained by <a href="{{ site.github.owner_url }}" class="text-blue-500">{{ site.github.owner_name }}</a></p>
-    {% endif %}
-
-    <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist" class="text-blue-500">orderedlist</a></small></p>
-</footer>
+    <footer class="bg-gray-800 text-white py-4">
+        <div class="container mx-auto px-4">
+            <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/pages-themes/minimal" class="text-blue-500">minimal</a></small></p>
+        </div>
+    </footer>
+</div>
 
 <script src="{{ "/assets/js/scale.fix.js" | relative_url }}"></script>
 </body>
