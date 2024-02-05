@@ -5,6 +5,9 @@
   "repository": "https://github.com/harrywang/tailpages.git",
   "author": "Harry Wang <harryjwang@gmail.com>",
   "license": "MIT",
+  "scripts": {
+    "tailwind": "npx tailwindcss -i ./assets/css/main.css -o ./assets/css/tailwind.css --watch"
+  },
   "devDependencies": {
     "@tailwindcss/typography": "^0.5.0",
     "autoprefixer": "^10.4.2",

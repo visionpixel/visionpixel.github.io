@@ -1,3 +1,8 @@
 @tailwind base;
 @tailwind utilities;
 @tailwind components;
+
+.font-days {
+    font-family: 'Days One', sans-serif;
+    color: var(--custom-color);
+}

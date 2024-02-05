@@ -1,18 +1,23 @@
-# change the followings to match your Github username and repo name
-baseurl: "/" # the name of your github repo
-url: "https://visionpixel.github.io" # the url of your github pages
+## global setup
+baseurl: ""
+url: "https://visionpixel.github.io"
 
-# site information used in page title, meta data etc.
 title: "visionpixel"
 description: "Github Page from visionpixel"
+
+## style setup
+blue: 294c94
+green: 91b151
+
+# content setup
+onlyYear: "%Y"
 
 # color theme for links
 theme-color: green # indigo|yellow|pink|green|stone|
 
 # homepage information
 author: Marcel Rableski
-author-bio: IT Consultant and Developer  # change to false to hide
-author-image: profile.jpeg  # file must be in the /assets/img/ folder
+author-image: profile.jpeg
 
 # navigation menu
 show-nav-menu: false
@@ -26,14 +31,10 @@ twitter: https://twitter.com/visionpixel
 facebook: false
 instagram: false
 github: https://github.com/visionpixel
-linkedin: https://linkedin.com/marcel-rableski
+linkedin: https://linkedin.com/in/marcel-rableski
 medium: false
 google-scholar: false
 email: false
-
-# footer information
-footer-msg: false
-footer-msg-link: false
 
 # google analytics
 google-analytics: false
@@ -41,3 +42,5 @@ google-analytics: false
 # jekyll plugins - no need to change
 plugins:
     - jekyll-seo-tag
+
+
