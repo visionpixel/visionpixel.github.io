@@ -1,0 +1,18 @@
+---
+layout: default
+---
+
+<section class="flex-1 flex-shrink">
+    <div class="mx-auto text-center vp vp-{{site.theme-color}}">
+        <div>
+            <img class="object-cover mx-auto h-36 w-36 rounded-full" src="{{site.baseurl}}/assets/img/profile.jpeg"
+                 alt="author profile image">
+            <h1 class="font-days" style="--custom-color:#{{site.style.blue}};">{{site.author}}</h1>
+        </div>
+        <p class="text-gray-500 pb-4">
+            <span>Software Developer @visionpixel</span><br/>
+            <span>IT Consultant @SVA</span>
+        </p>
+    </div>
+    {% include social-media.html %}
+</section>

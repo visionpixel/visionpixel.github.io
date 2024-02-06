@@ -1,45 +1,52 @@
-## global setup
+## page setup
 baseurl: ""
 url: "https://visionpixel.github.io"
 
+
+## theme setup
+# theme
+theme-color: green
+
+# custom
+style:
+  blue: 294c94
+  green: 91b151
+
+
+## content setup
+# general
 title: "visionpixel"
 description: "Github Page from visionpixel"
-
-## style setup
-blue: 294c94
-green: 91b151
-
-# content setup
-onlyYear: "%Y"
-
-# color theme for links
-theme-color: green # indigo|yellow|pink|green|stone|
-
-# homepage information
 author: Marcel Rableski
 author-image: profile.jpeg
 
 # navigation menu
-show-nav-menu: false
-
+show-nav-menu: true
 nav-menu:
-- text: About
-  permalink: about
+  - text: Home
+    permalink: /
+  - text: About
+    permalink: /about
+  - text: Blog
+    permalink: /blog
 
-# use false to turn off any social media links
-twitter: https://twitter.com/visionpixel
-facebook: false
-instagram: false
-github: https://github.com/visionpixel
-linkedin: https://linkedin.com/in/marcel-rableski
-medium: false
-google-scholar: false
-email: false
+# social menu
+social-menu:
+  - icon: fa-twitter
+    link: https://twitter.com/visionpixel
+  - icon: fa-github
+    link: https://github.com/visionpixel
+  - icon: fa-linkedin
+    link: https://linkedin.com/in/marcel-rableski
+
+# date
+onlyYear: "%Y"
 
 # google analytics
 google-analytics: false
 
-# jekyll plugins - no need to change
+
+## jekyll plugins - no need to change
 plugins:
     - jekyll-seo-tag
 
