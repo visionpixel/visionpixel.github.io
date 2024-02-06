@@ -1,7 +1,7 @@
-## page setup
+## project setup
 baseurl: ""
 url: "https://visionpixel.github.io"
-
+include: [".well-known"]
 
 ## theme setup
 # theme
